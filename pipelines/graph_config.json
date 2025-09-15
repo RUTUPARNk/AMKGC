@@ -1,0 +1,118 @@
+[
+  {
+    "id": "summarize_and_translate",
+    "description": "Summarize text and then translate to French",
+    "nodes": [
+      {
+        "id": "summarizer",
+        "type": "model",
+        "backend": "ollama",
+        "model": "llama3:latest",
+        "description": "Summarizes input text"
+      },
+      {
+        "id": "translator",
+        "type": "model",
+        "backend": "ollama",
+        "model": "llama3:latest",
+        "description": "Translates text to French"
+      }
+    ],
+    "edges": [
+      { "from": "summarizer", "to": "translator" }
+    ]
+  },
+  {
+    "id": "multi_model_analysis",
+    "description": "Analyze text with multiple models",
+    "nodes": [
+      {
+        "id": "sentiment",
+        "type": "model",
+        "backend": "ollama",
+        "model": "llama3:latest",
+        "description": "Analyze sentiment of input text"
+      },
+      {
+        "id": "keywords",
+        "type": "model",
+        "backend": "ollama",
+        "model": "llama3:latest",
+        "description": "Extract keywords from input text"
+      },
+      {
+        "id": "summary",
+        "type": "model",
+        "backend": "ollama",
+        "model": "llama3:latest",
+        "description": "Summarize input text"
+      }
+    ],
+    "edges": [
+      { "from": "sentiment", "to": "summary" },
+      { "from": "keywords", "to": "summary" }
+    ]
+  },
+  {
+    "id": "cloud_hybrid_pipeline",
+    "description": "Example pipeline using both local and cloud models",
+    "nodes": [
+      {
+        "id": "local_processing",
+        "type": "model",
+        "backend": "ollama",
+        "model": "llama3:latest",
+        "description": "Initial processing with local model"
+      },
+      {
+        "id": "cloud_enhancement",
+        "type": "model",
+        "backend": "openai",
+        "model": "gpt-3.5-turbo",
+        "description": "Enhancement with cloud model"
+      }
+    ],
+    "edges": [
+      { "from": "local_processing", "to": "cloud_enhancement" }
+    ]
+  },
+  {
+    "id": "conditional_routing_example",
+    "description": "Example pipeline with conditional routing based on sentiment",
+    "nodes": [
+      {
+        "id": "sentiment_analyzer",
+        "type": "model",
+        "backend": "ollama",
+        "model": "llama3:latest",
+        "description": "Analyze sentiment of input text"
+      },
+      {
+        "id": "positive_response",
+        "type": "model",
+        "backend": "ollama",
+        "model": "llama3:latest",
+        "description": "Generate positive response"
+      },
+      {
+        "id": "negative_response",
+        "type": "model",
+        "backend": "ollama",
+        "model": "llama3:latest",
+        "description": "Generate negative response"
+      },
+      {
+        "id": "neutral_response",
+        "type": "model",
+        "backend": "ollama",
+        "model": "llama3:latest",
+        "description": "Generate neutral response"
+      }
+    ],
+    "edges": [
+      { "from": "sentiment_analyzer", "to": "positive_response", "condition": "sentiment == 'positive'" },
+      { "from": "sentiment_analyzer", "to": "negative_response", "condition": "sentiment == 'negative'" },
+      { "from": "sentiment_analyzer", "to": "neutral_response", "condition": "sentiment == 'neutral'" }
+    ]
+  }
+]

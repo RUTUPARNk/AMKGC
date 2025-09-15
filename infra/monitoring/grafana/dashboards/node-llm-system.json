@@ -1,0 +1,166 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Node-LLM System Dashboard",
+    "timezone": "browser",
+    "schemaVersion": 16,
+    "version": 0,
+    "refresh": "25s",
+    "rows": [
+      {
+        "title": "System Overview",
+        "height": "250px",
+        "panels": [
+          {
+            "id": 1,
+            "title": "Backend CPU Usage",
+            "type": "graph",
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "rate(process_cpu_seconds_total{job=\"node-llm-system-backend\"}[5m])",
+                "legendFormat": "CPU Usage"
+              }
+            ],
+            "xaxis": {
+              "mode": "time"
+            },
+            "yaxes": [
+              {
+                "format": "percentunit",
+                "label": "CPU Usage"
+              },
+              {
+                "format": "short"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Backend Memory Usage",
+            "type": "graph",
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "process_resident_memory_bytes{job=\"node-llm-system-backend\"}",
+                "legendFormat": "Memory Usage"
+              }
+            ],
+            "xaxis": {
+              "mode": "time"
+            },
+            "yaxes": [
+              {
+                "format": "bytes",
+                "label": "Memory"
+              },
+              {
+                "format": "short"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Request Metrics",
+        "height": "250px",
+        "panels": [
+          {
+            "id": 3,
+            "title": "HTTP Requests per Second",
+            "type": "graph",
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "rate(http_requests_total{job=\"node-llm-system-backend\"}[5m])",
+                "legendFormat": "{{method}} {{status}}"
+              }
+            ],
+            "xaxis": {
+              "mode": "time"
+            },
+            "yaxes": [
+              {
+                "format": "reqps",
+                "label": "Requests/sec"
+              },
+              {
+                "format": "short"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "title": "Request Latency",
+            "type": "graph",
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "histogram_quantile(0.95, rate(http_request_duration_seconds_bucket{job=\"node-llm-system-backend\"}[5m]))",
+                "legendFormat": "95th percentile"
+              },
+              {
+                "expr": "histogram_quantile(0.5, rate(http_request_duration_seconds_bucket{job=\"node-llm-system-backend\"}[5m]))",
+                "legendFormat": "50th percentile"
+              }
+            ],
+            "xaxis": {
+              "mode": "time"
+            },
+            "yaxes": [
+              {
+                "format": "s",
+                "label": "Latency"
+              },
+              {
+                "format": "short"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Pipeline Metrics",
+        "height": "250px",
+        "panels": [
+          {
+            "id": 5,
+            "title": "Pipeline Executions",
+            "type": "graph",
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "rate(pipeline_executions_total[5m])",
+                "legendFormat": "{{status}}"
+              }
+            ],
+            "xaxis": {
+              "mode": "time"
+            },
+            "yaxes": [
+              {
+                "format": "short",
+                "label": "Executions"
+              },
+              {
+                "format": "short"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "title": "Active Workers",
+            "type": "stat",
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "count(active_agents)",
+                "legendFormat": "Active Workers"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

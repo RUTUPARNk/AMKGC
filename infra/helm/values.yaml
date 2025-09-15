@@ -1,0 +1,107 @@
+# Default values for node-llm-system
+replicaCount:
+  backend: 1
+  frontend: 1
+  worker: 1
+
+image:
+  repository: node-llm-system
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+backend:
+  service:
+    port: 8000
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+  autoscaling:
+    enabled: true
+    minReplicas: 1
+    maxReplicas: 3
+    targetCPUUtilizationPercentage: 60
+
+frontend:
+  service:
+    port: 3000
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+worker:
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+  autoscaling:
+    enabled: true
+    minReplicas: 1
+    maxReplicas: 3
+    targetCPUUtilizationPercentage: 60
+
+redis:
+  enabled: true
+  image:
+    repository: redis
+    tag: 7-alpine
+  service:
+    port: 6379
+
+postgres:
+  enabled: true
+  image:
+    repository: postgres
+    tag: 15
+  service:
+    port: 5432
+  postgresDatabase: node_llm_system
+  postgresUser: node_llm_user
+
+neo4j:
+  enabled: false
+  image:
+    repository: neo4j
+    tag: 5
+  service:
+    port: 7687
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {}
+  hosts:
+    - host: node-llm-demo.local
+      paths:
+        - path: /
+          pathType: Prefix
+        - path: /api
+          pathType: Prefix
+  tls: []
+
+resources:
+  requests:
+    cpu: 200m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+autoscaling:
+  enabled: false
+nodeSelector: {}
+tolerations: []
+affinity: {}

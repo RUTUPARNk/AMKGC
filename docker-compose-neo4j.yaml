@@ -1,0 +1,28 @@
+services:
+  neo4j:
+    image: neo4j:5.14.0-community
+    container_name: node-llm-neo4j
+    ports:
+      - "7474:7474"  # HTTP browser
+      - "7687:7687"  # Bolt protocol
+    environment:
+      - NEO4J_AUTH=neo4j/password
+      - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_server_memory_heap_initial__size=1G
+      - NEO4J_server_memory_heap_max__size=2G
+      - NEO4J_server_jvm_additional=-Ddbms.security.auth_enabled=false
+      - NEO4J_db_tx_log_rotation_retention_policy=100M size
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+      - ./neo4j/plugins:/plugins
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "localhost:7474"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  neo4j_data:
+  neo4j_logs:

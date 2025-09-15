@@ -1,0 +1,8 @@
+# Version Service Dependencies
+psycopg[binary]>=3.0
+
+# For JSON diff operations (optional)
+# jsondiff>=1.2.0
+
+# For more advanced diff operations (optional)
+# deepdiff>=6.0.0

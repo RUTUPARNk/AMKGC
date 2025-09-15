@@ -1,0 +1,103 @@
+2025-08-26 05:30:39,564 - INFO - Ollama Supervisor Service initialized
+2025-08-26 05:30:39,596 - INFO - Supervisor daemon started
+2025-08-26 05:30:39,845 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 05:30:57,068 - INFO - Ollama Supervisor Service initialized
+2025-08-26 05:30:57,100 - INFO - Supervisor daemon started
+2025-08-26 05:30:57,313 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 05:31:14,934 - INFO - Ollama Supervisor Service initialized
+2025-08-26 05:31:14,970 - INFO - Supervisor daemon started
+2025-08-26 05:31:15,167 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 05:31:39,125 - INFO - Ollama Supervisor Service initialized
+2025-08-26 05:31:39,126 - INFO - Supervisor daemon started
+2025-08-26 05:31:39,333 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 05:31:45,407 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 05:31:54,132 - INFO - Supervisor daemon stopped
+2025-08-26 05:31:54,549 - INFO - Supervisor daemon stopped
+2025-08-26 05:33:58,588 - INFO - Ollama Supervisor Service initialized
+2025-08-26 05:33:58,619 - INFO - Supervisor daemon started
+2025-08-26 05:34:34,212 - INFO - Ollama Supervisor Service initialized
+2025-08-26 05:34:34,212 - INFO - Supervisor daemon started
+2025-08-26 05:34:49,231 - INFO - Supervisor daemon stopped
+2025-08-26 05:35:17,811 - INFO - Ollama Supervisor Service initialized
+2025-08-26 05:35:17,811 - INFO - Supervisor daemon started
+2025-08-26 05:38:41,993 - INFO - Supervisor daemon stopped
+2025-08-26 05:38:47,190 - INFO - Ollama Supervisor Service initialized
+2025-08-26 05:38:47,212 - INFO - Supervisor daemon started
+2025-08-26 05:39:04,414 - INFO - Supervisor daemon stopped
+2025-08-26 05:39:10,055 - INFO - Ollama Supervisor Service initialized
+2025-08-26 05:39:10,092 - INFO - Supervisor daemon started
+2025-08-26 05:39:27,251 - INFO - Supervisor daemon stopped
+2025-08-26 05:39:32,336 - INFO - Ollama Supervisor Service initialized
+2025-08-26 05:39:32,370 - INFO - Supervisor daemon started
+2025-08-26 12:40:44,488 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:40:48,585 - INFO - Supervisor daemon started
+2025-08-26 12:40:48,833 - INFO -  INCIDENT [process_down] at 2025-08-26T07:10:48.833661: Ollama process not running
+2025-08-26 12:41:23,053 - INFO -  INCIDENT [process_down] at 2025-08-26T07:11:23.053126: Ollama process not running
+2025-08-26 12:41:45,264 - INFO - Supervisor daemon stopped
+2025-08-26 12:41:52,634 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:41:54,697 - INFO - Supervisor daemon started
+2025-08-26 12:42:29,384 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 12:42:54,126 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:42:56,177 - INFO - Supervisor daemon started
+2025-08-26 12:42:58,413 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 12:43:01,853 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 12:43:19,391 - INFO - Supervisor daemon stopped
+2025-08-26 12:43:34,114 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 12:43:42,794 - INFO - Supervisor daemon stopped
+2025-08-26 12:43:48,471 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:43:52,532 - INFO - Supervisor daemon started
+2025-08-26 12:43:52,736 - INFO -  INCIDENT [process_down] at 2025-08-26T07:13:52.736236: Ollama process not running
+2025-08-26 12:44:15,814 - INFO - Supervisor daemon stopped
+2025-08-26 12:44:21,926 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:44:23,985 - INFO - Supervisor daemon started
+2025-08-26 12:44:26,249 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 12:44:58,546 - WARNING - MemoryWarning: Memory usage high, considering model unload...
+2025-08-26 12:45:15,564 - INFO - Supervisor daemon stopped
+2025-08-26 12:45:20,727 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:45:24,770 - INFO - Supervisor daemon started
+2025-08-26 12:45:24,960 - INFO -  INCIDENT [process_down] at 2025-08-26T07:15:24.960358: Ollama process not running
+2025-08-26 12:45:38,246 - INFO -  INCIDENT [process_down] at 2025-08-26T07:15:38.246262: Ollama process not running
+2025-08-26 12:45:50,003 - INFO - Supervisor daemon stopped
+2025-08-26 12:45:55,272 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:45:57,310 - INFO - Supervisor daemon started
+2025-08-26 12:50:08,599 - INFO - Supervisor daemon stopped
+2025-08-26 12:50:21,554 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:50:25,637 - INFO - Supervisor daemon started
+2025-08-26 12:50:25,840 - INFO -  INCIDENT [process_down] at 2025-08-26T07:20:25.840325: Ollama process not running
+2025-08-26 12:50:48,170 - INFO - Supervisor daemon stopped
+2025-08-26 12:50:53,834 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:50:57,900 - INFO - Supervisor daemon started
+2025-08-26 12:50:58,096 - INFO -  INCIDENT [process_down] at 2025-08-26T07:20:58.096553: Ollama process not running
+2025-08-26 12:51:11,413 - INFO -  INCIDENT [process_down] at 2025-08-26T07:21:11.413212: Ollama process not running
+2025-08-26 12:51:23,167 - INFO - Supervisor daemon stopped
+2025-08-26 12:51:29,204 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:51:29,204 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:51:33,272 - INFO - Supervisor daemon started
+2025-08-26 12:51:33,466 - INFO -  INCIDENT [process_down] at 2025-08-26T07:21:33.466831: Ollama process not running
+2025-08-26 12:52:05,787 - INFO -  INCIDENT [process_down] at 2025-08-26T07:22:05.787788: Ollama process not running
+2025-08-26 12:52:24,831 - INFO - Supervisor daemon stopped
+2025-08-26 12:53:20,196 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:53:20,196 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:53:24,284 - INFO - Supervisor daemon started
+2025-08-26 12:53:24,500 - INFO -  INCIDENT [process_down] at 2025-08-26T07:23:24.500042: Ollama process not running
+2025-08-26 12:55:07,012 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:55:07,018 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:55:26,225 - INFO - Ollama Supervisor Service initialized
+2025-08-26 12:55:26,226 - INFO - Ollama Supervisor Service initialized
+2025-08-26 13:03:04,076 - INFO - Ollama Supervisor Service initialized
+2025-08-26 13:03:04,077 - INFO - Ollama Supervisor Service initialized
+2025-08-26 13:03:09,318 - INFO - Ollama Supervisor Service initialized
+2025-08-26 13:03:09,318 - INFO - Ollama Supervisor Service initialized
+2025-08-26 13:03:14,065 - INFO - Ollama Supervisor Service initialized
+2025-08-26 13:03:14,065 - INFO - Ollama Supervisor Service initialized
+2025-08-26 13:03:25,110 - INFO - Ollama Supervisor Service initialized
+2025-08-26 13:04:24,833 - INFO - Ollama Supervisor Service initialized
+2025-08-26 13:04:24,835 - INFO - Ollama Supervisor Service initialized
+2025-08-28 10:10:30,735 - INFO - Ollama Supervisor Service initialized
+2025-08-28 10:10:34,650 - INFO - Ollama Supervisor Service initialized
+2025-08-28 10:11:20,593 - INFO - Ollama Supervisor Service initialized
+2025-08-28 10:11:31,996 - INFO - Ollama Supervisor Service initialized
+2025-08-28 10:16:17,247 - INFO - Ollama Supervisor Service initialized
+2025-08-28 10:16:22,777 - INFO - Ollama Supervisor Service initialized
+2025-08-28 10:16:48,242 - INFO - Ollama Supervisor Service initialized
+2025-08-28 10:19:53,208 - INFO - Ollama Supervisor Service initialized

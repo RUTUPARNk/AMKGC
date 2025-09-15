@@ -1,0 +1,35 @@
+{
+  "id": "sentiment_classification",
+  "description": "Combined sentiment analysis and text classification",
+  "version": "1.0.0",
+  "input_contract": {
+    "text": "string"
+  },
+  "output_contract": {
+    "sentiment": "string",
+    "classification": "string",
+    "confidence": "float"
+  },
+  "nodes": [
+    {
+      "id": "sentiment_analyzer",
+      "type": "model",
+      "backend": "ollama",
+      "model": "llama3:latest",
+      "description": "Analyze sentiment of input text",
+      "prompt_template": "Analyze the sentiment of the following text and respond with only one word: positive, negative, or neutral. Text: {{input.text}}"
+    },
+    {
+      "id": "classifier",
+      "type": "model",
+      "backend": "ollama",
+      "model": "llama3:latest",
+      "description": "Classify text into categories",
+      "prompt_template": "Classify the following text into one of these categories: news, review, social_media, technical. Respond with only the category name. Text: {{input.text}}"
+    }
+  ],
+  "edges": [
+    { "from": "input", "to": "sentiment_analyzer" },
+    { "from": "input", "to": "classifier" }
+  ]
+}

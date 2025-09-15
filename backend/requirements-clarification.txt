@@ -1,0 +1,11 @@
+# Clarification Service Dependencies
+psycopg[binary]>=3.0
+
+# For LLM integration (using existing LLM service)
+# Dependencies should already be included in main requirements
+
+# For regex operations (built-in, but specifying for completeness)
+# No additional dependencies needed for basic regex
+
+# For JSON parsing (built-in, but specifying for completeness)
+# No additional dependencies needed for basic JSON

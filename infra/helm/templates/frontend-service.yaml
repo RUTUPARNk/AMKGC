@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "node-llm-system.fullname" . }}-frontend
+  labels:
+    {{- include "node-llm-system.labels" . | nindent 4 }}
+    app: frontend
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.frontend.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "node-llm-system.selectorLabels" . | nindent 4 }}
+    app: frontend

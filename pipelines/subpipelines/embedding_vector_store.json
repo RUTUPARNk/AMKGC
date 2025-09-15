@@ -1,0 +1,37 @@
+{
+  "id": "embedding_vector_store",
+  "description": "Text embedding and vector storage pipeline",
+  "version": "1.0.0",
+  "input_contract": {
+    "text": "string",
+    "collection": "string"
+  },
+  "output_contract": {
+    "embedding": "array",
+    "stored": "boolean",
+    "vector_id": "string"
+  },
+  "nodes": [
+    {
+      "id": "text_embedder",
+      "type": "model",
+      "backend": "ollama",
+      "model": "nomic-embed-text",
+      "description": "Generate embeddings for input text"
+    },
+    {
+      "id": "vector_store",
+      "type": "function",
+      "function": "store_vector",
+      "description": "Store embedding in vector database",
+      "config": {
+        "database": "redis",
+        "collection_field": "collection"
+      }
+    }
+  ],
+  "edges": [
+    { "from": "input", "to": "text_embedder" },
+    { "from": "text_embedder", "to": "vector_store" }
+  ]
+}

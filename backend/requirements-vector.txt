@@ -1,0 +1,15 @@
+# Vector Service Dependencies
+psycopg[binary]>=3.0
+pgvector>=0.2.0
+
+# Embedding providers (choose one or both)
+# For OpenAI embeddings
+openai>=1.30.0
+
+# For local embeddings (sentence-transformers)
+torch>=1.10.0
+sentence-transformers>=2.2.0
+
+# Alternative local embedding option
+# transformers>=4.20.0
+# datasets>=2.0.0

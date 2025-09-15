@@ -1,0 +1,28 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node-llm-system-backend'
+    static_configs:
+      - targets: ['node-llm-system-backend:8000']
+
+  - job_name: 'node-llm-system-frontend'
+    static_configs:
+      - targets: ['node-llm-system-frontend:3000']
+
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['node-llm-system-redis:6379']
+
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['node-llm-system-postgres:5432']
